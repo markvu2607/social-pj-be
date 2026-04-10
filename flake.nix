@@ -15,6 +15,9 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             go
+            golangci-lint
+            air
+            lefthook
           ];
 
           shellHook = ''
