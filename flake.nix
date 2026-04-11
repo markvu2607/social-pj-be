@@ -15,9 +15,13 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             go
+            golangci-lint
+            air
+            lefthook
           ];
 
           shellHook = ''
+            lefthook install
             echo "Environment loaded"
             echo "Go: $(go version)"
           '';
