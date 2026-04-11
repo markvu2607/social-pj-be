@@ -21,6 +21,7 @@
           ];
 
           shellHook = ''
+            lefthook install
             echo "Environment loaded"
             echo "Go: $(go version)"
           '';
